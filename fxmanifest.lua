@@ -1,14 +1,22 @@
+-- fxmanifest.lua
 fx_version 'cerulean'
+game 'gta5'
 lua54 'yes'
-game 'gta5' 
-shared_script '@ox_lib/init.lua'
+
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config.lua'
+}
 
 client_scripts {
-	'init.lua',
-	'config.lua',
-	'client/main.lua'
+    'client/hud.lua',    
+    'client/main.lua'   
 }
+
 server_scripts {
-	'config.lua',
-	'server/main.lua'
+    'server/main.lua'
+}
+
+dependencies {
+    'ox_lib'
 }
